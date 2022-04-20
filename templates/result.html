@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+h1{
+        text-align: center;
+
+        background-color: #bac1e8
+        }
+
+table{
+font-family: Arial;
+border-collapse: separate;
+border-spacing:15px;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  overflow-x: hidden;
+  
+}
+
+.left {
+  left: 0;
+  
+
+}
+
+
+.right {
+    
+  right: 0;
+  background-color: white;
+}
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+</style>
+
+
+
+</head>
+<body>
+<h1 style="color:black;">Invoice Text Extraction</h1>
+
+<div class="split left">
+
+<embed
+    src="{{result}}"
+    type="application/pdf"
+    frameBorder="0"
+    scrolling="auto"
+    height="90%"
+    width="99%"
+></embed>
+</div>
+
+
+<div class="split right">
+
+
+<form >
+
+  <table>
+  <tr>
+   <td><font color="black">Invoice Date :</font>
+</td>
+    <td><textarea name="message" rows="1" cols="40" style="font-size: x-large">
+{{resulta}}
+     </textarea> </td>
+    </tr>
+  <tr><td><font color="black"> Invoice Number :  </font></td>
+           <td><textarea name="message" rows="1" cols="40" style="font-size: x-large">
+{{resultb}}
+             </textarea> </td></tr>
+            <tr><td><font color="black"> Total :  </font></td>
+           <td><textarea name="message" rows="1" cols="40" style="font-size: x-large">
+{{resultc}}
+             </textarea> </td></tr>
+             <tr><td><font color="black">Bill_from  :  </font></td>
+           <td><textarea name="message" rows="1" cols="40" style="font-size: x-large">
+{{resultd}}
+             </textarea> </td></tr>
+             <tr><td><font color="black"> Bill_to :  </font></td>
+           <td><textarea name="message" rows="1" cols="40" style="font-size: x-large">
+{{resulte}}
+             </textarea> </td></tr>
+    
+             </table>
+</form>
+
+</div>
+     
+</body>
+</html> 
